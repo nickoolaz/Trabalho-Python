@@ -123,3 +123,18 @@ def editar(aluno):
 
     else:
         exit()
+
+
+def deletar(aluno):
+    id = int(input("\nDigite o código: "))
+    for i, key in enumerate(aluno):
+        if (id == key["id"]):
+            del aluno[i]
+            print('Aluno deletado!')
+
+    opcao = int(input('\nDeseja retornar ao menu? [1-Sim/2-Não]: '))
+    if opcao == 1:
+        menu(aluno)
+
+    else:
+        exit()
