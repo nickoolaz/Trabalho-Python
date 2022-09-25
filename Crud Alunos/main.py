@@ -138,3 +138,16 @@ def deletar(aluno):
 
     else:
         exit()
+
+
+def sair(lista):
+    opcao = int(input('\nTem certeza que quer sair? [1-Sim/2-Não]: '))
+    if opcao == 1:
+        exit()
+
+    else:
+        menu(lista)
+
+
+if __name__ == '__main__':
+    menu(aluno)
