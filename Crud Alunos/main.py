@@ -102,3 +102,24 @@ def listar(aluno):
         else:
             exit()
 
+
+def editar(aluno):
+    print('\n--- Editar Aluno ---')
+
+    id = int(input("Digite o código: "))
+    for i, key in enumerate(aluno):
+        if (id == key["id"]):
+                key['cpf'] = input('Cpf: ')
+                key['nome'] = input('Nome: ')
+                key['idade'] = int(input('Idade: '))
+                key['turma'] = input('Turma: ')
+
+                print('--------------------\n')
+                print('Dados atualizados!')
+
+    opcao = int(input('\nDeseja retornar ao menu? [1-Sim/2-Não]: '))
+    if opcao == 1:
+        menu(aluno)
+
+    else:
+        exit()
