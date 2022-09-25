@@ -28,3 +28,36 @@ def menu(aluno):
         print('\nOpção inválida!')
         return menu(aluno)
 
+
+def cadastrar(aluno):
+    print('\n--- Cadastrar Aluno ---')
+    id = int(input('Id: '))
+    cpf = input('Cpf: ')
+    nome = input('Nome: ')
+    idade = int(input('Idade: '))
+    turma = input('Turma: ')
+
+
+    aluno.append({
+        'id': id,
+        'cpf': cpf,
+        'nome': nome,
+        'idade': idade,
+        'turma': turma
+
+    })
+    print('-----------------------\n')
+    print('Cadastro concluído!')
+
+    opcao = int(input ('\nDeseja cadastrar um novo aluno? [1-Sim/2-Não]: '))
+    if opcao == 1:
+        cadastrar(aluno)
+
+    elif opcao == 2:
+        menu(aluno)
+
+    else:
+        print('\nOpção inválida!')
+        menu(aluno)
+
+
